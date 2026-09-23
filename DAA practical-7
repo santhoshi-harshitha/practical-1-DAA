@@ -1,0 +1,77 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNtneBXq5Ne+hGg4+E9JHE0",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/santhoshi-harshitha/practical-1-DAA/blob/main/DAA%20practical-7\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "zbvMkRg6FCNi",
+        "outputId": "7eb353d6-364c-4cd1-927d-249a20d4035b"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter coin denominations: 1 2 5 10\n",
+            "Enter the amount: 18\n",
+            "Minimum number of coins required: 4\n"
+          ]
+        }
+      ],
+      "source": [
+        "def coin_change(coins, amount):\n",
+        "    dp = [float('inf')] * (amount + 1)\n",
+        "    dp[0] = 0\n",
+        "\n",
+        "    for i in range(1, amount + 1):\n",
+        "        for coin in coins:\n",
+        "            if coin <= i:\n",
+        "                dp[i] = min(dp[i], dp[i - coin] + 1)\n",
+        "\n",
+        "    if dp[amount] == float('inf'):\n",
+        "        return -1\n",
+        "    return dp[amount]\n",
+        "\n",
+        "\n",
+        "coins = list(map(int, input(\"Enter coin denominations: \").split()))\n",
+        "amount = int(input(\"Enter the amount: \"))\n",
+        "\n",
+        "result = coin_change(coins, amount)\n",
+        "\n",
+        "if result == -1:\n",
+        "    print(\"Amount cannot be formed using the given coins.\")\n",
+        "else:\n",
+        "    print(\"Minimum number of coins required:\", result)"
+      ]
+    }
+  ]
+}

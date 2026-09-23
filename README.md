@@ -16,10 +16,12 @@ Implements and compares common sorting techniques:
 The practical also discusses the time complexities of each sorting algorithm.
 
 ### Practical 2: Linear Search and Binary Search
-Demonstrates two methods for finding an element in an array:
+Explores two fundamental searching techniques used to locate a target element in an array. The practical explains how each algorithm works, demonstrates their implementation in Python, and compares their efficiency, requirements, and use cases.
 
-- Linear Search — checks each element sequentially and works with unsorted data.
-- Binary Search — repeatedly divides a sorted array in half to locate the target efficiently.
+- Linear Search — checks each element sequentially from the beginning of the array until the target is found or all elements have been examined. It can be applied to both sorted and unsorted arrays.
+- Binary Search — repeatedly compares the target with the middle element and eliminates half of the remaining search space after each comparison. It is more efficient than linear search but requires the array to be sorted.
+
+The practical also covers successful and unsuccessful searches, explains the difference between iterative and recursive approaches, and compares their time complexities. Linear search has a worst-case time complexity of **O(n)**, while binary search has a worst-case time complexity of **O(log n)** and a space complexity of **O(1)** when implemented iteratively.
 
 ### Practical 3: Heap Sort
 Implements Heap Sort using a max heap. The algorithm builds a heap and repeatedly extracts the largest element to produce a sorted array. Its theoretical time complexity is **O(n log n)**.
@@ -44,14 +46,3 @@ Implements two fundamental graph traversal algorithms:
 
 - Breadth-First Search (BFS) — explores vertices level by level using a queue.
 - Depth-First Search (DFS) — explores as far as possible along each branch using recursion.
-
-## Files
-
-- `DAA_practical01.ipynb` — Sorting algorithms
-- `DAA_practical_02.ipynb` — Linear and binary search
-- `DAA_practical03.ipynb` — Heap Sort
-- `DAA_practical04.ipynb` — Iterative and recursive factorial
-- `DAA_practical05.ipynb` — 0/1 Knapsack
-- `DAA_practical06.ipynb` — Matrix Chain Multiplication
-- `DAA_practical07.ipynb` — Coin Change
-- `DAA_practical08.ipynb` — BFS and DFS graph traversal

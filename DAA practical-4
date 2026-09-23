@@ -1,0 +1,94 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNXuacIC2TBZmYc/JjV6nk0",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/santhoshi-harshitha/practical-1-DAA/blob/main/DAA%20practical-4\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "n = int(input(\"Enter a number: \"))\n",
+        "\n",
+        "factorial = 1\n",
+        "\n",
+        "for i in range(1, n + 1):\n",
+        "    factorial = factorial * i\n",
+        "\n",
+        "print(\"Factorial using Iteration:\", factorial)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "KZtP4IRSESP9",
+        "outputId": "2e955e76-be68-495c-b5db-09311d15b73c"
+      },
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number: 7\n",
+            "Factorial using Iteration: 5040\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def factorial(n):\n",
+        "    if n == 0 or n == 1:\n",
+        "        return 1\n",
+        "    return n * factorial(n - 1)\n",
+        "\n",
+        "n = int(input(\"Enter a number: \"))\n",
+        "\n",
+        "result = factorial(n)\n",
+        "\n",
+        "print(\"Factorial using Recursion:\", result)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "OoZzSbLxEfZ6",
+        "outputId": "42475f56-6db6-4268-b4bf-375cd04eaa10"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number: 6\n",
+            "Factorial using Recursion: 720\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
